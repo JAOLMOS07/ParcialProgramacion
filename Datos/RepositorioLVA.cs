@@ -31,7 +31,9 @@ namespace Datos
 
                         lista.Add(Mapeador(linea));
                     }
+
                 }
+
             }
             catch (Exception) { 
             
