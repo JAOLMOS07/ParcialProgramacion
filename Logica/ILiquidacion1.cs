@@ -13,6 +13,5 @@ namespace Logica
         double TotalLiquidado(List<T> Liquidado);
         double ValorLiquidado(double Tarifa, double BaseGravable);
         double Tarifa(double Tarifa);
-
     }
 }
