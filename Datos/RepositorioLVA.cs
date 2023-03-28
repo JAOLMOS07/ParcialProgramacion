@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 
 namespace Datos
 {
-    internal class RepositorioLVA : IRepositorio<LiquidacionLVA>
+    public class RepositorioLVA : IRepositorio<LiquidacionLVA>
     {
         String Ruta = "Archivo.txt";
         public string Guardar(LiquidacionLVA liquidacion)
