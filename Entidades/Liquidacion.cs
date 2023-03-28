@@ -20,10 +20,10 @@ namespace Entidades
 
         public Liquidacion( int NumeroLiquidacion, string IdNit, string RazonSocial, double BaseGravable )
         {
-            numeroLiquidacion = NumeroLiquidacion;
-            idNit = IdNit;  
-            razonSocial = RazonSocial;
-            baseGravable = BaseGravable;
+            this.numeroLiquidacion = NumeroLiquidacion;
+            this.idNit = IdNit;  
+            this.razonSocial = RazonSocial;
+            this.baseGravable = BaseGravable;
         }
     }
 }

@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ServicioLiquidacionCC.cs" />
     <Compile Include="ServicioLiquidacionLVA.cs" />
     <Compile Include="ILiquidacion1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
