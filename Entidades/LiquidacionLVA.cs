@@ -19,6 +19,29 @@ namespace Entidades
         }
 
 
+        public override string ToString()
+        {
+
+            return clave + ";" + numeroLiquidacion + ";" + idNit + ";" + razonSocial + ";" + baseGravable ;
+        }
+
+        public double valorLiquidado() {
+            if (baseGravable <= 35)
+            {
+
+                return 272 * baseGravable;
+            }
+            else {
+                return 446 * baseGravable;
+            }
+
+        
+        }
+
+    
+
+
+
 
     }
 }
