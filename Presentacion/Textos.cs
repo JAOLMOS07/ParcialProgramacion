@@ -8,33 +8,34 @@ namespace Presentacion
 {
     public class Textos
     {
-        public string MenuPrincipal()
+        public void MenuPrincipal()
         {
             Console.WriteLine();
             var msg = "----------Menu----------";
             String[] strings = { "Registrar información de liquidación","Visualizar la información de liquidación",
             "Visualizar liquidaciones del impuesto consumo de cervezas,silfones y refajos",
             "Visualizar liquidaciones del impuesto licores,vinos y aperitivos","Visualizar Total recaudado por liquidaciones",
-            "Generar un archivo plano con un balance de las liquidaciones"};
+            "Generar un archivo plano con un balance de las liquidaciones", "Salir"};
             
             for (int i=0; i<strings.Count(); i++) 
             {
                 msg+= (i+1) + strings[i]+ "\n";
             }
-            return msg;
+            msg += "Digite una opción ";
+            Console.WriteLine(msg);
         }
-        public string Submenu() 
+        public void Submenu() 
         {
             Console.Clear();
             var msg = "----------Registro de información de liquidación----------\n";
-            String[] strings = { "Liquidación Licores,vinos o aperitivos", "Liquidaciones Cervezas", "Salir" };
+            String[] strings = { "Liquidación Licores,vinos o aperitivos", "Liquidaciones Cervezas", "Volver" };
 
             for (int i = 0; i < strings.Count(); i++)
             {
                 msg += $"{i + 1}->{strings[i]}\n";
             }
             msg += "Digite una opción ";
-            return msg;
+            Console.WriteLine(msg);
         }
     }
 }

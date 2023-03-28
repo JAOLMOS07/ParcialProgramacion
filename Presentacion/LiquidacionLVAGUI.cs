@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Presentacion
 {
-    internal class Program
+    public class LiquidacionLVAGUI
     {
-        static void Main(string[] args)
+        public void ObtenerDatos()
         {
-            Menu menu = new Menu();
-            menu.MostrarMenu();
+            Console.Clear();
+
         }
     }
 }
