@@ -12,6 +12,9 @@ namespace Datos
     public class RepositorioLVA : IRepositorio<LiquidacionLVA>
     {
         String Ruta = "Liquidaciones.txt";
+
+   
+
         public string Guardar(LiquidacionLVA liquidacion)
         {
             try

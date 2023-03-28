@@ -19,6 +19,18 @@ namespace Logica
            return repo.Guardar(Liquidacion);
         }
 
+        public LiquidacionCC buscar(string numero)
+        {
+            List<LiquidacionCC> lista = ObtenerLista();
+            for (int i = 0; i < lista.Count; i++)
+            {
+                if (numero.Equals(lista[i].numeroLiquidacion)) {
+                    return lista[i];
+                }
+            }
+            return new LiquidacionCC();
+        }
+
         public List<LiquidacionCC> ObtenerLista()
         {
             return repo.TraerLista();
@@ -40,10 +52,7 @@ namespace Logica
             return total;
         }
 
-        public double TotalLiquidado()
-        {
-            throw new NotImplementedException();
-        }
+
 
         public double ValorLiquidado(double Tarifa, double BaseGravable)
         {

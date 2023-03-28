@@ -13,5 +13,7 @@ namespace Logica
         double TotalLiquidado();
         double ValorLiquidado(double Tarifa, double BaseGravable);
         double Tarifa(double Tarifa);
+
+        T buscar(String numero);
     }
 }

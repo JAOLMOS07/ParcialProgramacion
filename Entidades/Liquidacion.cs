@@ -8,7 +8,7 @@ namespace Entidades
 {
     public class Liquidacion
     {
-        protected String numeroLiquidacion { get; set; }
+        public String numeroLiquidacion { get; set; }
         protected string idNit { get; set; }
         protected string razonSocial { get; set; }
         protected double baseGravable { get; set; }

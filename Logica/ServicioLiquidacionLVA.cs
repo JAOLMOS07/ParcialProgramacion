@@ -17,6 +17,19 @@ namespace Logica
             return repo.Guardar(Liquidacion);
         }
 
+        public LiquidacionLVA buscar(string numero)
+        {
+            List<LiquidacionLVA> lista = ObtenerLista();
+            for (int i = 0; i < lista.Count; i++)
+            {
+                if (numero.Equals(lista[i].numeroLiquidacion))
+                {
+                    return lista[i];
+                }
+            }
+            return new LiquidacionLVA();
+        }
+
         public List<LiquidacionLVA> ObtenerLista()
         {
             return repo.TraerLista();

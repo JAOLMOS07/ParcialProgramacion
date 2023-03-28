@@ -10,6 +10,8 @@ namespace Datos
     {
          String Guardar(T liquidacion);
          List<T> TraerLista();
+
+  
          
     }
 }

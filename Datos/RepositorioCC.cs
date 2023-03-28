@@ -13,6 +13,9 @@ namespace Datos
     public class RepositorioCC : IRepositorio<LiquidacionCC>
     {
         String Ruta = "Liquidaciones.txt";
+
+  
+
         public string Guardar(LiquidacionCC liquidacion)
         {
             try
