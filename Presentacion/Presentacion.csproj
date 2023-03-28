@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LiquidacionCCGUI.cs" />
     <Compile Include="LiquidacionLVAGUI.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="Program.cs" />

@@ -11,11 +11,11 @@ namespace Presentacion
 {
     public class LiquidacionLVAGUI
     {
-        public void ObtenerDatos()
+        ServicioLiquidacionLVA ServicioLVA = new ServicioLiquidacionLVA();
+        public void ObtenerDatosLVA()
         {
             Console.Clear();
 
-            ServicioLiquidacionLVA ServicioLVA = new ServicioLiquidacionLVA();
             string numeroLiquidacion, identificacion, razonSocial,msg;
             double baseGravable;
 
@@ -29,11 +29,20 @@ namespace Presentacion
 
             msg = ServicioLVA.Agregar(liquidacionLVA);
             Console.WriteLine(msg);
+            Console.ReadKey();
         }
 
         public void VisualizarLiquidacion()
         {
 
+        }
+
+        public void MostrarLiquidacionLVA()
+        {
+            string msg = $"El total liquidado por licores, vinos y aperitivos " +
+            $"es de {ServicioLVA.TotalLiquidado()} pesos";
+            Console.WriteLine(msg);
+            Console.ReadKey();
         }
     }
 }

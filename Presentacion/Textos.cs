@@ -10,8 +10,8 @@ namespace Presentacion
     {
         public void MenuPrincipal()
         {
-            Console.WriteLine();
-            var msg = "----------Menu----------";
+            Console.Clear();
+            var msg = "---------------Menu---------------\n\n";
             String[] strings = { "Registrar información de liquidación","Visualizar la información de liquidación",
             "Visualizar liquidaciones del impuesto consumo de cervezas,silfones y refajos",
             "Visualizar liquidaciones del impuesto licores,vinos y aperitivos","Visualizar Total recaudado por liquidaciones",
@@ -19,7 +19,7 @@ namespace Presentacion
             
             for (int i=0; i<strings.Count(); i++) 
             {
-                msg+= (i+1) + strings[i]+ "\n";
+                msg+= (i+1) +"->"+ strings[i]+ "\n\n";
             }
             msg += "Digite una opción ";
             Console.WriteLine(msg);

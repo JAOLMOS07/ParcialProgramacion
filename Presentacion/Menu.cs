@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace Presentacion
 {
-   public class Menu
+    public class Menu
     {
         Textos texto = new Textos();
         public void MostrarMenu()
         {
             int Op;
+            LiquidacionLVAGUI LVA = new LiquidacionLVAGUI();
+            LiquidacionCCGUI CCGUI = new LiquidacionCCGUI();
             do
             {
                 texto.MenuPrincipal();
@@ -28,12 +30,24 @@ namespace Presentacion
                             {
                                 case 1:
                                     {
-                                        LiquidacionLVAGUI LVA = new LiquidacionLVAGUI();
-                                        LVA.ObtenerDatos();
+                                        LVA.ObtenerDatosLVA();
                                     }break;
                             }
 
                         }break;
+                    case 2:
+                        {
+
+                        }break;
+                    case 3:
+                        {
+
+                        }break;
+                    case 4:
+                        {
+                            LVA.MostrarLiquidacionLVA();
+                        }
+                        break;
                 }
             } while (Op != 7);
         }
