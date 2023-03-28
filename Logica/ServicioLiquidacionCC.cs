@@ -10,19 +10,18 @@ namespace Logica
 {
     public class ServicioLiquidacionCC : ILiquidacion1<LiquidacionCC>
     {
-        
-        List<LiquidacionCC> liquidacions = new List<LiquidacionCC>();
+       
+        RepositorioCC repo = new RepositorioCC();
 
-        public List<LiquidacionCC> GetLiquidacionCCs() { return liquidacions; }
         public string Agregar(LiquidacionCC Liquidacion)
         {
 
-            throw new NotImplementedException();
+           return repo.Guardar(Liquidacion);
         }
 
         public List<LiquidacionCC> ObtenerLista()
         {
-            throw new NotImplementedException();
+            return repo.TraerLista();
         }
 
         public double Tarifa(double Tarifa)
@@ -32,7 +31,13 @@ namespace Logica
 
         public double TotalLiquidado(List<LiquidacionCC> Liquidado)
         {
-            throw new NotImplementedException();
+            List<LiquidacionCC> lista = ObtenerLista();
+            double total = 0;
+            for (int i = 0; i < lista.Count; i++)
+            {
+                total += lista[i].valorLiquidado();
+            }
+            return total;
         }
 
         public double ValorLiquidado(double Tarifa, double BaseGravable)
