@@ -31,6 +31,21 @@ namespace Presentacion
             Console.WriteLine(msg);
             Console.ReadKey();
         }
+        public void VisualizarLiquidacionCC()
+        {
+            string msg="----------Cervezas,sifones y refajos----------\n";
+            foreach(var s in ServicioCC.ObtenerLista())
+            {
+                msg += "Numero liquidacion : " + s.numeroLiquidacion+ "\n";
+                msg += "Id/NIT : "+s.idNit + "\n";
+                msg += "Razón Social : "+s.razonSocial + "\n";
+                msg += "Tipo : " + s.Tipo + "\n";
+                msg += "Base Gravable : " + s.baseGravable + "\n";
+                msg += "-----------------";
+            }
+            Console.WriteLine(msg);
+            Console.ReadKey();
+        }
 
         public void MostrarLiquidacionCC()
         {

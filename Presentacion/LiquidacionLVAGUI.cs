@@ -42,12 +42,17 @@ namespace Presentacion
 
         public void MostrarLiquidacionesLVA()
         {
-            Console.Clear();
-            foreach(var s in ServicioLVA.ObtenerLista())
+            string msg = "----------Licores,vinos y aperitivos----------\n";
+            foreach (var s in ServicioLVA.ObtenerLista())
             {
-                Console.WriteLine(s.GetType());
-                Console.WriteLine("----------");
+                msg += "Numero liquidacion : " + s.numeroLiquidacion + "\n";
+                msg += "Id/NIT : " + s.idNit + "\n";
+                msg += "Razón Social : " + s.razonSocial + "\n";
+                msg += "Base Gravable : " + s.baseGravable + "\n";
+                msg += "-----------------";
             }
+            Console.WriteLine(msg);
+            Console.ReadKey();
         }
 
         public void MostrarValorLiquidacionLVA()

@@ -28,7 +28,20 @@ namespace Presentacion
         {
             Console.Clear();
             var msg = "----------Registro de información de liquidación----------\n";
-            String[] strings = { "Liquidación Licores,vinos o aperitivos", "Liquidaciones Cervezas", "Volver" };
+            String[] strings = { "Liquidación Licores,vinos o aperitivos", "Liquidaciones Cervezas, sifones o refajos", "Volver" };
+
+            for (int i = 0; i < strings.Count(); i++)
+            {
+                msg += $"{i + 1}->{strings[i]}\n";
+            }
+            msg += "Digite una opción ";
+            Console.WriteLine(msg);
+        }
+        public void SubmenuBuscar()
+        {
+            Console.Clear();
+            var msg = "----------Visualizar un dato----------\n";
+            String[] strings = { "Liquidación Licores,vinos o aperitivos", "Liquidaciones Cervezas, sifones o refajos", "Volver" };
 
             for (int i = 0; i < strings.Count(); i++)
             {

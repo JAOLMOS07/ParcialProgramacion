@@ -24,9 +24,9 @@ namespace Presentacion
                 {
                     case 1:
                         {
+                            int Op1;
                             do
                             {
-                                int Op1;
                                 texto.Submenu();
                                 Op1 = int.Parse(Console.ReadLine());
                                 switch (Op1)
@@ -49,15 +49,18 @@ namespace Presentacion
                                         }
                                         break;
                                 }
-                            } while (Op != 3);
+                            } while (Op1 != 3);
                         }break;
                     case 2:
                         {
-
-                        }break;
+                            LVAGUI.VisualizarLiquidacionLVA();
+                        }
+                        break;
                     case 3:
                         {
-
+                            CCGUI.VisualizarLiquidacionCC();
+                            Console.ReadKey();
+                            
                         }break;
                     case 4:
                         {

@@ -8,8 +8,8 @@ namespace Entidades
 {
     public class LiquidacionCC:Liquidacion
     {
-        String Tipo { get; set; }
-        const String clave = "CC";
+        public string Tipo { get; set; }
+        const string clave = "CC";
 
         public LiquidacionCC(String NumeroLiquidacion, string IdNit, string RazonSocial, double BaseGravable, string tipo) : base(NumeroLiquidacion, IdNit, RazonSocial, BaseGravable)
         {
