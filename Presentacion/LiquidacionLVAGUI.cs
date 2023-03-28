@@ -34,6 +34,9 @@ namespace Presentacion
 
         public void VisualizarLiquidacion()
         {
+            string numeroLiquidacion;
+            Console.WriteLine("----------Licores, vinos y aperitivos----------");
+            Console.WriteLine("Número de liquidación a buscar : "); numeroLiquidacion = Console.ReadLine();
 
         }
 

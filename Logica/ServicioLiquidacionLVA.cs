@@ -14,7 +14,14 @@ namespace Logica
         RepositorioLVA repo = new RepositorioLVA();
         public string Agregar(LiquidacionLVA Liquidacion)
         {
-            return repo.Guardar(Liquidacion);
+
+            String txt = repo.Guardar(Liquidacion);
+            ServicioLiquidacionCC serv = new ServicioLiquidacionCC();
+            double lva = TotalLiquidado();
+            double cc = serv.TotalLiquidado();
+            Archivo ar = new Archivo();
+            ar.Actualizar(cc, lva);
+            return txt;
         }
 
         public LiquidacionLVA buscar(string numero)
@@ -32,6 +39,7 @@ namespace Logica
 
         public List<LiquidacionLVA> ObtenerLista()
         {
+           
             return repo.TraerLista();
         }
 

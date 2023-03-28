@@ -15,8 +15,15 @@ namespace Logica
 
         public string Agregar(LiquidacionCC Liquidacion)
         {
+            String txt = repo.Guardar(Liquidacion);
+            ServicioLiquidacionLVA serv = new ServicioLiquidacionLVA();
+            double lva = serv.TotalLiquidado();
+            double cc = TotalLiquidado();
+            Archivo ar = new Archivo();
+            ar.Actualizar(cc, lva);
 
-           return repo.Guardar(Liquidacion);
+            
+            return txt ;
         }
 
         public LiquidacionCC buscar(string numero)
