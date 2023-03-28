@@ -32,7 +32,7 @@ namespace Presentacion
             Console.ReadKey();
         }
 
-        public void VisualizarLiquidacion()
+        public void VisualizarLiquidacionLVA()
         {
             string numeroLiquidacion;
             Console.WriteLine("----------Licores, vinos y aperitivos----------");
@@ -40,7 +40,17 @@ namespace Presentacion
 
         }
 
-        public void MostrarLiquidacionLVA()
+        public void MostrarLiquidacionesLVA()
+        {
+            Console.Clear();
+            foreach(var s in ServicioLVA.ObtenerLista())
+            {
+                Console.WriteLine(s.GetType());
+                Console.WriteLine("----------");
+            }
+        }
+
+        public void MostrarValorLiquidacionLVA()
         {
             string msg = $"El total liquidado por licores, vinos y aperitivos " +
             $"es de {ServicioLVA.TotalLiquidado()} pesos";
