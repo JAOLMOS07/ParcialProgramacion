@@ -10,7 +10,7 @@ namespace Logica
     {
         List<T> ObtenerLista();
         string Agregar(T Liquidacion);
-        double TotalLiquidado(List<T> Liquidado);
+        double TotalLiquidado();
         double ValorLiquidado(double Tarifa, double BaseGravable);
         double Tarifa(double Tarifa);
     }

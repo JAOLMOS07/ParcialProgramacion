@@ -27,7 +27,7 @@ namespace Logica
             throw new NotImplementedException();
         }
 
-        public double TotalLiquidado(List<LiquidacionLVA> Liquidado)
+        public double TotalLiquidado()
         {
             List<LiquidacionLVA> lista = ObtenerLista();
             double total = 0;

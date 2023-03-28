@@ -29,7 +29,7 @@ namespace Logica
             throw new NotImplementedException();
         }
 
-        public double TotalLiquidado(List<LiquidacionCC> Liquidado)
+        public double TotalLiquidado()
         {
             List<LiquidacionCC> lista = ObtenerLista();
             double total = 0;
@@ -38,6 +38,11 @@ namespace Logica
                 total += lista[i].valorLiquidado();
             }
             return total;
+        }
+
+        public double TotalLiquidado()
+        {
+            throw new NotImplementedException();
         }
 
         public double ValorLiquidado(double Tarifa, double BaseGravable)
