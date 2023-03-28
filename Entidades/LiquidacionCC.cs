@@ -11,7 +11,7 @@ namespace Entidades
         String Tipo { get; set; }
         const String clave = "CC";
 
-        public LiquidacionCC(String NumeroLiquidacion, string IdNit, string RazonSocial, double BaseGravable, string tipo) : base(NumeroLiquidacion, IdNit, RazonSocial, BaseGravable)
+        public LiquidacionCC(string NumeroLiquidacion, string IdNit, string RazonSocial, double BaseGravable, string tipo) : base(NumeroLiquidacion, IdNit, RazonSocial, BaseGravable)
         {
             Tipo = tipo;
         }
