@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Logica
 {
-    public class Class1
+    public interface ILiquidacion1
     {
+        double ValorLiquidado(double Tarifa, double BaseGravable);
+        double Tarifa(double Tarifa);
+
     }
 }
