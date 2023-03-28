@@ -8,7 +8,7 @@ namespace Entidades
 {
     public class Liquidacion
     {
-        protected int numeroLiquidacion { get; set; }
+        protected String numeroLiquidacion { get; set; }
         protected string idNit { get; set; }
         protected string razonSocial { get; set; }
         protected double baseGravable { get; set; }
@@ -18,7 +18,7 @@ namespace Entidades
 
         }
 
-        public Liquidacion( int NumeroLiquidacion, string IdNit, string RazonSocial, double BaseGravable )
+        public Liquidacion( String NumeroLiquidacion, string IdNit, string RazonSocial, double BaseGravable )
         {
             this.numeroLiquidacion = NumeroLiquidacion;
             this.idNit = IdNit;  

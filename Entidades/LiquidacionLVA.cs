@@ -14,10 +14,9 @@ namespace Entidades
         {
         }
 
-        public LiquidacionLVA(int NumeroLiquidacion, string IdNit, string RazonSocial, double BaseGravable) : base(NumeroLiquidacion, IdNit, RazonSocial, BaseGravable)
+        public LiquidacionLVA(string NumeroLiquidacion, string IdNit, string RazonSocial, double BaseGravable) : base(NumeroLiquidacion, IdNit, RazonSocial, BaseGravable)
         {
         }
-
 
         public override string ToString()
         {
