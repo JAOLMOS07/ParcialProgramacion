@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Configuration;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,7 +13,7 @@ namespace Presentacion
         public void MostrarMenu()
         {
             int Op;
-            LiquidacionLVAGUI LVA = new LiquidacionLVAGUI();
+            LiquidacionLVAGUI LVAGUI = new LiquidacionLVAGUI();
             LiquidacionCCGUI CCGUI = new LiquidacionCCGUI();
             do
             {
@@ -23,17 +24,32 @@ namespace Presentacion
                 {
                     case 1:
                         {
-                            int Op1; 
-                           texto.Submenu();
-                            Op1=int.Parse(Console.ReadLine());
-                            switch (Op1) 
+                            do
                             {
-                                case 1:
-                                    {
-                                        LVA.ObtenerDatosLVA();
-                                    }break;
-                            }
-
+                                int Op1;
+                                texto.Submenu();
+                                Op1 = int.Parse(Console.ReadLine());
+                                switch (Op1)
+                                {
+                                    case 1:
+                                        {
+                                            LVAGUI.ObtenerDatosLVA();
+                                        }
+                                        break;
+                                    case 2:
+                                        {
+                                            CCGUI.ObtenerDatosCC();
+                                        }
+                                        break;
+                                    case 3:
+                                        break;
+                                    default:
+                                        {
+                                            Console.WriteLine("Digite una opción válida");
+                                        }
+                                        break;
+                                }
+                            } while (Op != 3);
                         }break;
                     case 2:
                         {
@@ -45,8 +61,23 @@ namespace Presentacion
                         }break;
                     case 4:
                         {
-                            LVA.MostrarLiquidacionLVA();
+                            LVAGUI.MostrarLiquidacionesLVA();
+                            Console.ReadKey();
                         }
+                        break;
+                    case 5:
+                        {
+                            Console.Clear();
+                            Console.WriteLine("----------Total Liquidado----------\n");
+                            LVAGUI.MostrarValorLiquidacionLVA();
+                            Console.WriteLine();
+                            CCGUI.MostrarLiquidacionCC();  
+                        }break;
+                    case 6:
+                        {
+
+                        }break;
+                    case 7:
                         break;
                 }
             } while (Op != 7);

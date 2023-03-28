@@ -23,6 +23,7 @@ namespace Prueba
             Console.WriteLine("Total: "+servi.TotalLiquidado());
             Console.ReadLine();
 
+            
         }
     }
 }
