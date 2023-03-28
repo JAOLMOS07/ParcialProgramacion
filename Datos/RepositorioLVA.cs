@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entidades
+namespace Datos
 {
-    public class LiquidacionCC
+    internal class RepositorioLVA
     {
 
     }
